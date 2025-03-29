@@ -27,8 +27,8 @@ const HeistCard = ({location, startDate, endDate, planEntry}) => {
       <p className={styles.cardContent}>
         <strong>End Date: </strong> {formatDate(endDate)}
       </p>
-      <p className={styles.cardContent}> {planEntry}
-        <strong>Plan: </strong>
+      <p className={styles.cardContent}> 
+        <strong>Plan: </strong> {planEntry}
       </p>
     </div>
   );
