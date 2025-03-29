@@ -3,7 +3,7 @@ import styles from "./style.module.css";
 
 // TODO: Add props to HeistCard
   // HINT: look at pages/addHeist.jsx, line 19... what props are passed when we add a heist?
-const HeistCard = ({heist}) => {
+const HeistCard = ({location, startDate, endDate, plan}) => {
   // Bonus: Format date function
   const formatDate = (date) => {
     if (!date) return '';
@@ -19,15 +19,15 @@ const HeistCard = ({heist}) => {
     <div className={styles.card}>
       <Image src="/heist_placeholder.jpg" width={550} height={300}/>
       <p className={styles.cardContent}>
-        <strong>Heist: </strong> {heist.location}
+        <strong>Heist: </strong> {location}
       </p>
       <p className={styles.cardContent}>
-        <strong>Start Date: </strong> {heist.startDate}
+        <strong>Start Date: </strong> {startDate}
       </p>
       <p className={styles.cardContent}>
-        <strong>End Date: </strong> {heist.endDate}
+        <strong>End Date: </strong> {endDate}
       </p>
-      <p className={styles.cardContent}> {heist.plan}
+      <p className={styles.cardContent}> {plan}
         <strong>Plan: </strong>
       </p>
     </div>
